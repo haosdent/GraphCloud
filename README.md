@@ -1,10 +1,10 @@
 # GraphCloud
 
-A GraphLab implemention by Clojure.
+A graph computation framework on YARN modeled after GraphLab.
 
 ## Status
 
-Under active development
+Under rapidly development
 
 ## License
 
