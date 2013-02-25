@@ -1,4 +1,4 @@
-package me.haosdent.cloud.graph.Service
+package me.haosdent.cloud.graph.service
 
 import me.haosdent.cloud.graph.model.Task
 

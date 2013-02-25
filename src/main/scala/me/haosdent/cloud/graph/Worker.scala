@@ -2,7 +2,7 @@ package me.haosdent.cloud.graph
 
 import akka.actor.Actor
 import akka.event.Logging
-import me.haosdent.cloud.graph.Service.{Edges, Vertexs, Tasks}
+import me.haosdent.cloud.graph.service.{Edges, Vertexs, Tasks}
 
 class Worker extends Actor {
   val log = Logging(context.system, this)
