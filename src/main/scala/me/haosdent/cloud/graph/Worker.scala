@@ -27,14 +27,17 @@ class Worker extends Actor {
       taskList foreach {
         task =>
           val source = vertexService.getVertex(task.id)
-          source.initAsSource()
+          vertexService.initAsSource(source)
           val edgeList = edgeService.getEdgeList(source.id)
           edgeList foreach {
             edge =>
               val target = vertexService.getVertex(edge.targetId)
               //TODO
               //apply(gather(source, edge), target)
-              target.finishAsTarget()
+              val newTask = vertexService.finishAsTarget(target)
+              if (newTask != null) {
+                taskService.save(newTask)
+              }
           }
       }
     }

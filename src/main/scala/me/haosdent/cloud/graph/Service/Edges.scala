@@ -7,4 +7,9 @@ class Edges {
     //TODO
     List.empty[Edge]
   }
+
+  def save(edge: Edge) = {
+    //TODO
+    //Save to HBase
+  }
 }

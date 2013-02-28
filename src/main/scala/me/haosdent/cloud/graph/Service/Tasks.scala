@@ -15,4 +15,9 @@ class Tasks {
     //3. When failed
     List.empty[Task]
   }
+
+  def save(task: Task) = {
+    //TODO
+    //Save to HBase
+  }
 }
