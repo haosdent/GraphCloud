@@ -14,8 +14,8 @@ class Edges {
     List.empty[Edge]
   }
 
-  def parse[T](record: Result, toValue: Array[Byte] => T) : Edge[T] = {
-    val rowkey = record.getRow
+  def parse[V](record: Result, toValue: Array[Byte] => V) : Edge[V] = {
+    val rowkey = record.getRow()
     val sourceId = Bytes.toLong(rowkey, 0, 8)
     val targetId = Bytes.toLong(rowkey, 8, 8)
     val value = toValue(record.getValue(cfBytes, valueBytes))
